@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lí sinh viên</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="main">
+   <h2> Quản lí học sinh</h2>
+   Họ tên: <input type="text" placeholder="Nhập Họ và Tên Học sinh..." id="name">
+   Ngày sinh : <input type="date"  id="born">
+  <div class="sex1">
+    Giới tính:  <br>
+   <input type="radio" id="male" name="gender"  value="Nam"> <label for="male">Nam</label><br>
+  <input type="radio" id="female" name="gender" value="Nữ"> <label for="female">Nữ</label><br>
+  <input type="radio" id="other" name="gender" value="unknow"> <label for="other">Khác...</label>
+ </div>
+   <div class="address">
+   <h3> Địa chỉ: </h3>
+   <br> Tên Đường: <br> <input type="text" placeholder="Nhập Tên Đường..." id="street">
+   <br> Thành Phố: <br> <input type="text" placeholder="Nhập Tên thành Phố..." id="city">
+   <br> Tỉnh: <br> <input type="text" placeholder="Nhập Tên Tỉnh..." id="province">
+   </div>
+   <div class="phone-mail">
+   <h3>Thông tin liên lạc:</h3>
+   <br> Số điện thoại: <br> <input type="text" placeholder="Nhập số điện thoại..." id="phone">
+   <br> Email: <br> <input type="email" placeholder="Nhập Email..." id="mail">
+   </div>
+   <div class="scores">
+   <h3>Thành tích học tập:</h3>
+    <br> Môn 1: <input type="number" placeholder="Nhập điểm môn thứ nhất..." id="point_1">
+    <br> Môn 2: <input type="number" placeholder="Nhập điểm môn thứ hai..." id="point_2">
+   <br> Môn 3: <input type="number" placeholder="Nhập điểm môn thứ ba..." id="point_3">
+   <br> Đi học: <br> 
+   <input class="status" type="radio" id="Yes" name="status" value="Đi học" > <label for="Yes">Có</label><br>
+   <input class="status" type="radio" id="No" name="status" value="Nghỉ học"> <label for="No">không</label><br>
+   <div style="display: flex; margin-top: 15px;">
+    <button type="button" style="background-color: #6895e3" id="add_btn">Thêm</button>
+    <button style="background-color: #e6d08a" type="reset" id="reset_btn">reset</button>
+
+</div>
+</div>    
+<table border="1" cellspacing='0' cellpadding="5" style="margin-top: 50px;"  >
+    <caption>DANH SÁCH SINH VIÊN</caption>
+    <thead>
+        <tr id="headtable">
+            <th>Stt</th>
+            <th>Họ Tên học sinh</th>
+            <th>Giới tính</th>
+            <th>Ngày sinh</th>
+            <th>Địa chỉ</th>
+            <th>Số điện thoại</th>
+            <th>Email</th>
+            <th>Điểm môn 1</th>
+            <th>Điểm môn 2</th>
+            <th>Điểm môn 3</th>
+            <th>Tình trạng</th>
+        </tr>
+    </thead>
+    <tbody id="bodytable">
+    </tbody>
+</table>
+<script src="./main.js"></script>
+</body>
+</html>
